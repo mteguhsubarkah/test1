@@ -1,0 +1,46 @@
+{
+  "name": "Anomaly",
+  "fields": [
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "machine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sensor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "anomaly",
+      "fieldType": "AnomalyType",
+      "fieldValues": "Mild,Moderate,Severe"
+    },
+    {
+      "fieldName": "soundclip",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20230602154848",
+  "entityTableName": "anomaly",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

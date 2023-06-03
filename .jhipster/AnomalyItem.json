@@ -1,0 +1,59 @@
+{
+  "name": "AnomalyItem",
+  "fields": [
+    {
+      "fieldName": "reason",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "machine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "ActionType",
+      "fieldValues": "Immediate,Later,NoAction"
+    },
+    {
+      "fieldName": "soundclip",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soundData",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "anomaly",
+      "otherEntityRelationshipName": "anomalyItem",
+      "relationshipName": "anomaly",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20230602155131",
+  "entityTableName": "anomaly_item",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

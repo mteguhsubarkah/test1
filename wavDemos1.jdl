@@ -1,0 +1,25 @@
+
+
+entity Anomaly{
+    timestamp ZonedDateTime
+    machine String
+      sensor String
+    anomaly AnomalyType
+    soundclip String
+    createdAt ZonedDateTime
+    updatedAt ZonedDateTime
+
+}
+
+
+enum AnomalyType {
+	Mild,
+Moderate,
+Severe
+
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
+filter *

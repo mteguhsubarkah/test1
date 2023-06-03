@@ -1,0 +1,45 @@
+
+
+entity Anomaly{
+    timestamp LocalDate
+    machine String
+      sensor String
+    anomaly AnomalyType
+    soundclip String
+    createdAt ZonedDateTime
+    updatedAt ZonedDateTime
+
+}
+entity AnomalyItem{
+    reason String
+        machine String
+coment String
+    action ActionType
+        soundclip String
+        soundData Blob
+    createdAt ZonedDateTime
+    updatedAt ZonedDateTime
+
+}
+
+enum ActionType {
+	
+Immediate,
+Later,
+NoAction
+
+}
+enum AnomalyType {
+	Mild,
+Moderate,
+Severe
+
+}
+relationship ManyToOne{
+AnomalyItem{anomaly} to Anomaly
+
+}
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
+filter *
